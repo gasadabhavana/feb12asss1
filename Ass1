@@ -1,0 +1,29 @@
+hor=100
+soaps=50
+paste=50
+perfume=80
+coffee=50
+cname=input('enter customer name')
+horq=int(input('enter hor packets'))
+soq=int(input('enter soq packets'))
+paq=int(input('enter paq packets'))
+perq=int(input('enter perq packets'))
+cofq=int(input('enter cofq packets'))
+bill=(hor*horq)+(soaps*soq)+(paste*paq)+(perfume*perq)+(coffee*cofq)
+if bill>5000:
+    dis=bill*10/100
+    tax=bill*10/100
+if bill>3000:
+    dis=bill*8/100
+    tax=bill*10/100
+if bill>2000:
+    dis=bill*5/100
+    tax=bill*18/100
+if bill>1000:
+    dis=bill*3/1000
+    tax=bill*18/100
+else:
+    dis=0
+    tax=0
+mb=bill-dis+tax
+print('bill amount:',mb)
